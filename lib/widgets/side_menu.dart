@@ -1,5 +1,6 @@
 import 'package:dashboard_ui_template/constants/controller.dart';
 import 'package:dashboard_ui_template/widgets/side_menu_item.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -62,7 +63,7 @@ class SideMenu extends StatelessWidget {
                 .map((item) => SideMenuItem(
                 itemName: item.name,
                 onTap: () {
-                  if(item.route == authenticationPageRoute){
+                  if(item.route == authenticationPageDisplayName){
                     Get.offAllNamed(authenticationPageRoute);
                     menuController.changeActiveItemTo(overviewPageDisplayName);
 
@@ -72,6 +73,8 @@ class SideMenu extends StatelessWidget {
                     if(ResponsiveWidget.isSmallScreen(context)) {
                       Get.back();
                     }
+                    debugPrint(item.name);
+                    navigationController.navigateTo(item.name);
                   }
                 }))
                 .toList(),

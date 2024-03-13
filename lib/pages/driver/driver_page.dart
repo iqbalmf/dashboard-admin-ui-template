@@ -1,3 +1,4 @@
+import 'package:dashboard_ui_template/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 /**
@@ -10,6 +11,6 @@ class DriverPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return CustomText(text: "Driver Page");
   }
 }

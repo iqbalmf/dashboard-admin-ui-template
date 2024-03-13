@@ -20,9 +20,7 @@ class LargeScreen extends StatelessWidget {
         Expanded(child: SideMenu()),
         Expanded(
             flex: 5,
-            child: Container(
-              color: Colors.blue,
-            ))
+            child: localNavigator())
       ],
     );
   }
