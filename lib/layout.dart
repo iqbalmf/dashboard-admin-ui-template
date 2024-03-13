@@ -1,5 +1,6 @@
 import 'package:dashboard_ui_template/helpers/responsive.dart';
 import 'package:dashboard_ui_template/widgets/large_screen.dart';
+import 'package:dashboard_ui_template/widgets/side_menu.dart';
 import 'package:dashboard_ui_template/widgets/small_screen.dart';
 import 'package:dashboard_ui_template/widgets/top_nav.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,7 +21,9 @@ class SiteLayout extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       appBar: topNavigationBar(context, scaffoldKey),
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: SideMenu(),
+      ),
       body: ResponsiveWidget(
         largeScreen: LargeScreen(),
         smallScreen: SmallScreen(),

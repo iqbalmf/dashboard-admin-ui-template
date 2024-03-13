@@ -1,5 +1,9 @@
+import 'package:dashboard_ui_template/widgets/side_menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+import '../helpers/local_navigators.dart';
 
 /**
  * Created by IqbalMF on 2024.
@@ -13,11 +17,7 @@ class LargeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
-            flex: 1,
-            child: Container(
-              color: Colors.red,
-            )),
+        Expanded(child: SideMenu()),
         Expanded(
             flex: 5,
             child: Container(

@@ -1,10 +1,12 @@
 import 'package:dashboard_ui_template/layout.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:dashboard_ui_template/controllers/menu_controller.dart' as menu_controller;
 
 void main() {
-  runApp(const MyApp());
+  Get.put(menu_controller.MenuController());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
           TargetPlatform.iOS: FadeUpwardsPageTransitionsBuilder(),
           TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
         }),
-        primaryColor: Colors.amber
+        primaryColor: Colors.blue
       ),
       home: SiteLayout(),
     );
